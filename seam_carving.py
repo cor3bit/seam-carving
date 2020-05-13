@@ -173,9 +173,11 @@ def allign_seams(img_gray, seams):
             mask[row_i, j_adj] = True
 
     k = len(seams)
+
     # print(np.sum(mask))
     # print(np.sum(mask) / k)
     # print(k * n)
+
     assert np.sum(mask) == k * n
 
     return mask
@@ -222,7 +224,7 @@ def expand_img_with_mask(img_bgr, mask, k):
                         img_bgr_exp[i, j_exp, c] = left_v
                         img_bgr_exp[i, j_exp + 1, c] = right_v
                     else:
-                        # exanded image
+                        # expanded image
                         left_v = (img_bgr[i, j, c] + img_bgr[i, j - 1, c]) / 2.
                         right_v = (img_bgr[i, j, c] + img_bgr[i, j + 1, c]) / 2.
                         img_bgr_exp[i, j_exp, c] = left_v

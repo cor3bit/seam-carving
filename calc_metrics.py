@@ -42,7 +42,6 @@ if __name__ == '__main__':
 
     analyze(im, im_gt)
 
-
     # REPLICATE FIGURE 8 (2007)
     print('\nDolphin 50')
     fig_path = os.path.join('output', 'fig8d.png')
@@ -60,7 +59,6 @@ if __name__ == '__main__':
     im_gt = cv2.imread(fig_gt_path)
 
     analyze(im, im_gt)
-
 
     # REPLICATE FIGURE 8 (2009)
     print('\nBench BWD')
